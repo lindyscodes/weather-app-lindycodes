@@ -1,0 +1,81 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    font-weight: semi-bold;
+  }
+  
+  .container-lg {
+    margin-top: 50px;
+    background-color: rgb(236, 250, 219);
+    border-radius: 35px;
+    text-align: left;
+    padding: 30px;
+  }
+  
+  .form-control.search-input {
+    border: none;
+  }
+  
+  /*img {
+    position: flex;
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 16px;
+  }*/
+  
+  h1 {
+    font-weight: bold;
+  }
+  
+  .btn.btn-primary.w-200 {
+    background-color: rgb(146, 70, 146);
+    margin: 10px 10px;
+  }
+  
+  .btn.btn-primary.w-300 {
+    background-color: rgb(186, 126, 186);
+    margin: 10px 10px;
+  }
+  
+  #initialCity,
+  .initialDateTime {
+    text-align: center;
+    color: rgb(126, 55, 126);
+  }
+  
+  #initialTemp {
+    text-align: center;
+    position: relative;
+    color: rgb(97, 6, 97);
+    margin: none;
+  }
+  
+  .boldedTitles {
+    font-weight: bolder;
+    opacity: 0.7;
+    font-size: 17px;
+    text-decoration: underline;
+    word-wrap: break-word;
+  }
+  
+  #fahrenheit,
+  #celcius {
+    font-weight: lighter;
+    text-decoration: none;
+  }
+  
+  .termsAndConditions {
+    margin-top: 30px;
+    text-align: center;
+    color: rgb(88, 15, 88);
+  }
+  
+  .weatherForecast {
+    color: rgb(31, 7, 25);
+  }
+  
+  .weekday {
+    text-align: center;
+  }
+  

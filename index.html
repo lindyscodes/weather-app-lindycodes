@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheCodes Lindy G Weather App.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" class="styles">
+    <script type="text/javascript" src="index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <div class="container-lg">
+    <form action="submit" class="search-form">
+      <div class="row">
+        <div class="col-9">
+        <input type="search" class="form-control search-input" id="search-your-city" placeholder="Hey! Enter your city here..." autofocus="on"/>
+        </div>
+     <div class="col-3 p-20">
+    <input type="submit" class="btn btn-primary w-200" id="search-button" value="Search">
+    <div class="col-3 p-20" id="button">
+    <input type="submit" class="btn btn-primary w-300" id="current-location-button" value="Current Location">
+       </div>
+     </div>
+</form>
+<br>
+<br>
+<br>
+<br>
+<div class="weatherInfo">
+  <div class="row">
+    <div class="col">
+			<span><h1 class="initialCity" id="initialCity">San Francisco</h1></span>
+        <h2 class="initialDateTime" id="initialTimeDate date">
+          <div>Time & Date: 
+          </div>
+				<span class="day-of-week" id="date">Tuesday</span>
+				<div></div>
+      </div>
+			</h2>
+      <div class="col"><span><h1 id="initialTemp">
+        <br>
+        <i class="fa-regular fa-sun fa-spin today-sun" style="--fa-animation-duration: 30s"></i>
+<span class="local-temp-in-time">0°</span>
+      </span>
+    <span><a href="#" id="fahrenheit">F</a></span>
+    <span><a href="#" id="celcius">C</a></span></div>
+  </div>
+<br>
+<div class="row termsAndConditions">
+  <div class="col-4"><b class="boldedTitles">Humidity</b>
+    <div class="col" id="humidity">It's humid!</div>
+  </div>
+      <div class="col-4"><b class="boldedTitles">Wind Speed</b>
+      <div class="col" id="wind">Sunny, mild, foggy</div>
+    </div>
+    <div class="col-4"><b class="boldedTitles">Conditions</b>
+      <div class="col" id="conditions">Wear a <em>sweater!</em></div>
+    </div>
+</div>
+<br>
+<br>
+<div class="weatherForecast">
+    <div class="row">
+    <div class="col weekday"><b>Monday</b>
+      <div class="col">
+        <i class="fa fa-sun-o fa" aria-hidden="true"></i>
+        <br>
+        It is <em>sunny!</em>
+        </div>
+      </div>
+    <div class="col weekday"><b>Tuesday</b>
+      <div class="col">
+        <i class="fa fa-sun-o fa" aria-hidden="true"></i>
+        <br>
+        Going to be <em>cloudy!</em></div>
+    </div>
+    <div class="col weekday"><b>Wednesday</b>
+      <div class="col">
+        <i class="fa fa-sun-o" aria-hidden="true"></i>
+        <br>
+        Lots of <em>sun!</em></div>
+    </div>
+    <div class="col weekday"><b>Thursday</b>
+      <div class="col">
+        <i class="fa fa-sun-o" aria-hidden="true"></i>
+        <br>
+        Wear a <em>sweater!</em></div>
+    </div>
+    <div class="col weekday"><b>Friday</b>
+      <div class="col">
+        <i class="fa fa-sun-o" aria-hidden="true"></i>
+        <br>
+        <em>Happy Friday!</em></div>
+    </div>
+    <div class="col weekday"><b>Saturday</b>
+      <div class="col">
+        <i class="fa fa-sun-o" aria-hidden="true">
+        </i>
+        <br>
+        It's foggy today!</div>
+    </div>
+    <div class="col weekday"><b>Sunday</b>
+      <div class="col">
+        <i class="fa fa-sun-o fa" aria-hidden="true"></i>
+        <br>
+        It's raining today!
+      </div>
+    </div>
+    </div>
+</div>
+</div>
+</div> 
+ <script
+ src="https://kit.fontawesome.com/7ab1649706.js"
+ crossorigin="anonymous"
+>
+</script>
+<br>
+<hr>
+<p><small>Coded by Lindy G.</small></p>
+</body>
+</html>
