@@ -72,6 +72,5 @@ function formatDate(date) {
   let searchForm = document.querySelector(".search-form");
   searchForm.addEventListener("submit", handleSubmit);
   
-  //calling the function below to have preset destination
   searchCity("San Francisco");
   
