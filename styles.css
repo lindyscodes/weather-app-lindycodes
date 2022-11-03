@@ -71,7 +71,8 @@
   }
 
   .padded-div {
-    padding: 10px 10px;
+    padding-left: 0;
+    padding-right: 10px;
     margin: 0 auto;
   }
   
