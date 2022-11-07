@@ -72,5 +72,15 @@ function formatDate(date) {
   let searchForm = document.querySelector(".search-form");
   searchForm.addEventListener("submit", handleSubmit);
   
+ 
+ function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  alert("link clicked");
+ }
+ 
+ 
   searchCity("San Francisco");
+
+  let fahrenheitLink = document.querySelector("#fahrenheit-link");
+  fahrenheitLink.addEventListener("click", displayFahrenheitTemperature)
   
