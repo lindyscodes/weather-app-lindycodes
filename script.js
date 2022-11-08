@@ -37,6 +37,8 @@ function formatDate(date) {
       response.data.weather[0].main;
     let weatherIcon = document.querySelector("#weather-icon");
     weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    weatherIcon.setAttribute("alt", response.data.weather[0].description);
+    celcTemp = response.data.main.temp;
   }
   
   function getCurrentLocation(event) {
@@ -54,7 +56,7 @@ function formatDate(date) {
   
   function searchCity(city) {
     let apiKey = "ec0ac52f1b5471e4ffa6db3719c4826e";
-    let apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
+    let apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
     axios.get(apiWeatherURL).then(displayWeatherCondition);
   }
   
@@ -75,17 +77,33 @@ function formatDate(date) {
   searchForm.addEventListener("submit", handleSubmit);
   
  
- function displayCelcTemperature(event) {
+ function displayFTemperature(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector(".local-temp-in-time");
-  let cTemps = (fahrTemp - 32) / (5/9);
-  temperatureElement.innerHTML = Math.round(cTemps);
+  let fahrTemps = (celcTemp * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#main-temperature");
+  temperatureElement.innerHTML = Math.round(fahrTemps);
+ }
+
+ function displayFTemperature(event) {
+  event.preventDefault();
+  let fahrTemps = (celcTemp * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#main-temperature");
+  temperatureElement.innerHTML = Math.round(fahrTemps);
+ }
+
+ function displayCTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#main-temperature");
+  temperatureElement.innerHTML = Math.round(celcTemp);
  }
  
- let fahrTemp = 32;
+ let celcTemp = null;
  
   searchCity("San Francisco");
 
-  let celcLink = document.querySelector("#c-link");
-  fahrenheitLink.addEventListener("click", displayCelcTemperature)
+let fahrLink = document.querySelector("#f-link");
+fahrLink.addEventListener("click", displayFTemperature)
+
+let celcsLink = document.querySelector("#c-link");
+celcsLink.addEventListener("click", displayCTemperature)
   
