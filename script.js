@@ -35,6 +35,8 @@ function formatDate(date) {
     );
     document.querySelector("#conditions").innerHTML =
       response.data.weather[0].main;
+    let weatherIcon = document.querySelector("#weather-icon");
+    weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   }
   
   function getCurrentLocation(event) {
@@ -73,14 +75,17 @@ function formatDate(date) {
   searchForm.addEventListener("submit", handleSubmit);
   
  
- function displayFahrenheitTemperature(event) {
+ function displayCelcTemperature(event) {
   event.preventDefault();
-  alert("link clicked");
+  let temperatureElement = document.querySelector(".local-temp-in-time");
+  let cTemps = (fahrTemp - 32) / (5/9);
+  temperatureElement.innerHTML = Math.round(cTemps);
  }
  
+ let fahrTemp = 32;
  
   searchCity("San Francisco");
 
-  let fahrenheitLink = document.querySelector("#fahrenheit-link");
-  fahrenheitLink.addEventListener("click", displayFahrenheitTemperature)
+  let celcLink = document.querySelector("#c-link");
+  fahrenheitLink.addEventListener("click", displayCelcTemperature)
   
