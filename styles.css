@@ -22,11 +22,13 @@
   .btn.btn-primary.w-200 {
     background-color: rgb(146, 70, 146);
     margin: 10px 10px;
+    word-wrap: break-word;
   }
   
   .btn.btn-primary.w-300 {
     background-color: rgb(186, 126, 186);
     margin: 10px 10px;
+    padding-right: 10px;
   }
   
   #initialCity,
