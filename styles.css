@@ -62,6 +62,7 @@
   }
   
   .termsAndConditions {
+    padding: none;
     margin-right: 50px;
     color: rgb(88, 15, 88);
   }
@@ -82,5 +83,9 @@
     text-decoration: none;
     font-weight: lighter;
     color:rgb(149, 6, 113);
+  }
+
+  .end-credits {
+    font-weight: bold;
   }
   

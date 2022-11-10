@@ -24,6 +24,8 @@ function formatDate(date) {
     return `${day} ${hours}:${minutes}`;
   }
   
+
+  //Core of the function/application here* //
   function displayWeatherCondition(response) {
     document.querySelector("#initialCity").innerHTML = response.data.name;
     document.querySelector(".local-temp-in-time").innerHTML = Math.round(
@@ -66,31 +68,24 @@ function formatDate(date) {
     searchCity(city);
   }
 
-  function getForecast(coordinates) {
-    console.log(coordinates);
-    let apiKey = "ec0ac52f1b5471e4ffa6db3719c4826e";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(displayForecast);
+  function formatDay(timestamp) {
+    let date = new Date(timestamp * 1000);
+    let day = date.getDay();
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  
+    return days[day];
   }
   
   let dateElement = document.querySelector("#date");
   let currentTime = new Date();
   dateElement.innerHTML = formatDate(currentTime);
   
-  let currentLocationButton = document.querySelector("#current-location-button");
-  currentLocationButton.addEventListener("click", getCurrentLocation);
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
   
-  let searchForm = document.querySelector(".search-form");
-  searchForm.addEventListener("submit", handleSubmit);
+let searchForm = document.querySelector(".search-form");
+searchForm.addEventListener("submit", handleSubmit);
   
- 
- function displayFTemperature(event) {
-  event.preventDefault();
-  let fahrTemps = (celcTemp * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#main-temperature");
-  temperatureElement.innerHTML = Math.round(fahrTemps);
- }
-
  function displayFTemperature(event) {
   event.preventDefault();
   let fahrTemps = (celcTemp * 9) / 5 + 32;
@@ -106,7 +101,7 @@ function formatDate(date) {
  
  let celcTemp = null;
  
-  searchCity("San Francisco");
+ searchCity("San Francisco");
 
 let fahrLink = document.querySelector("#f-link");
 fahrLink.addEventListener("click", displayFTemperature)
