@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SheCodes Lindy G Weather App.</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css" class="styles">
+    <link rel="stylesheet" href="weatherProjCopy.css" class="styles">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,14 +50,19 @@
     <span><a href="#" id="f-link">F</a></span>
     <span><a href="#" id="c-link">C</a></span></div>
   </div>
-<div class="row termsAndConditions">  
-  <div class="col-6">
-  <ul>
-    <li>Humidity: <span id="humidity"></span>%</li>
-    <li>Wind: <span id="wind"></span> km/h</li>
-    <li>Conditions: <span id="conditions"></span><span> ⛅️</span></li>
-  </ul>
-</div>
+<br>
+<div class="row termsAndConditions">
+  <div class="col-4"><b class="boldedTitles">Humidity</b>
+    %
+    <div class="col" id="humidity">Humidity here</div>
+  </div>
+      <div class="col-4"><b class="boldedTitles">Wind Speed</b>
+        %
+      <div class="col" id="wind">Wind speed here</div>
+    </div>
+    <div class="col-4"><b class="boldedTitles">Conditions</b>
+      <div class="col" id="conditions">Conditions here <em>sweater!</em></div>
+    </div>
 </div>
 <br>
 <br>
@@ -117,7 +122,13 @@
 <div class="padded-div">Open Source Code <a href="https://github.com/lindyscodes/weather-app-lindycodes">Here 🌻</a></div>
 </div>
 </div> 
+ <script
+ src="https://kit.fontawesome.com/7ab1649706.js"
+ crossorigin="anonymous"
+>
+</script>
+<div></div>
 <span><small>Coded by Lindy G.</small></span>
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="weatherProjCopy.js"></script>
 </body>
 </html>

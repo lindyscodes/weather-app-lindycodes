@@ -42,11 +42,6 @@
     margin: none;
   }
   
-  ul {
-    list-style-type: none;
-    text-align: center;
-  }
-  
   .boldedTitles {
     font-weight: bolder;
     opacity: 0.7;
@@ -62,7 +57,8 @@
   }
   
   .termsAndConditions {
-    margin-right: 50px;
+    margin-top: 30px;
+    text-align: center;
     color: rgb(88, 15, 88);
   }
   

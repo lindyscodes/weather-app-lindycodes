@@ -41,17 +41,16 @@
     color: rgb(97, 6, 97);
     margin: none;
   }
-  
+
   ul {
     list-style-type: none;
-    text-align: center;
   }
   
   .boldedTitles {
     font-weight: bolder;
     opacity: 0.7;
     font-size: 17px;
-    text-decoration: underline;
+    text-decoration: none;
     word-wrap: break-word;
   }
   
@@ -62,7 +61,7 @@
   }
   
   .termsAndConditions {
-    margin-right: 50px;
+    margin-left: 150px;
     color: rgb(88, 15, 88);
   }
   

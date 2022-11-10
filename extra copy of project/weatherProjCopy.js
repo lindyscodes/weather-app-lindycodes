@@ -65,13 +65,6 @@ function formatDate(date) {
     let city = document.querySelector("#search-your-city").value;
     searchCity(city);
   }
-
-  function getForecast(coordinates) {
-    console.log(coordinates);
-    let apiKey = "ec0ac52f1b5471e4ffa6db3719c4826e";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(displayForecast);
-  }
   
   let dateElement = document.querySelector("#date");
   let currentTime = new Date();
@@ -113,4 +106,3 @@ fahrLink.addEventListener("click", displayFTemperature)
 
 let celcsLink = document.querySelector("#c-link");
 celcsLink.addEventListener("click", displayCTemperature)
-  
